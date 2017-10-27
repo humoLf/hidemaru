@@ -1,0 +1,25 @@
+/**
+ * 秀丸マクロ
+ * var_dump を出力する
+ * 
+ * Yusuke Komori
+ * http://humo-life.net/
+ * mail@humo-life.net
+ */
+
+setcompatiblemode 0x0F;
+
+begingroupundo;
+
+insert "echo '<pre>';";
+insertreturn;
+insert "var_dump($);";
+insertreturn;
+insert "echo '</pre>';";
+insertreturn;
+
+endgroupundo 1;
+
+up 2;
+golineend;
+left 2;

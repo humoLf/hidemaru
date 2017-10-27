@@ -1,0 +1,37 @@
+﻿/**
+ * 秀丸マクロ
+ * PHP Document の出力
+ * 
+ * Yusuke Komori
+ * http://humo-life.net/
+ * mail@humo-life.net
+ */
+
+setcompatiblemode 0x0F;
+
+#x = x;
+#y = y;
+
+begingroupundo;
+
+insert "/**";
+insertreturn;
+insert " * ";
+insertreturn;
+insert "*";
+insertreturn;
+insert "* @param       int         $";
+insertreturn;
+insert "* @return      boolean";
+insertreturn;
+insert "*/";
+insertreturn;
+beginsel;
+golinetop;
+delete;
+
+endgroupundo 1;
+
+moveto #x, #y;
+down 1;
+golineend;

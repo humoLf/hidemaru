@@ -1,0 +1,14 @@
+﻿/**
+ * 秀丸マクロ
+ * console.log の出力
+ * 
+ * Yusuke Komori
+ * http://humo-life.net/
+ * mail@humo-life.net
+ */
+
+setcompatiblemode 0x0F;
+insert "console.log();\r\n";
+up 1;
+golineend;
+left 2;

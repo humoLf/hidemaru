@@ -1,0 +1,42 @@
+/**
+ * 秀丸マクロ
+ * PHPの構文の整形を行う
+ * 
+ * Yusuke Komori
+ * http://humo-life.net/
+ * mail@humo-life.net
+ */
+
+setcompatiblemode 0x0F;
+
+#x = x;
+#y = y;
+
+begingroupundo;
+
+// スペースや改行を揃える
+replaceallfast "(if|elseif|for|foreach)(?: |)\\((?: |)(.*)\\)(\n *|){", "\\1 (\\2) {", regular, nocasesense, nohilight;
+if( ! result )  beep;
+
+// 「)」前のスペースを削除
+replaceallfast "(if|elseif|for|foreach) \\((.*) \\) {$", "\\1 (\\2) {", regular, nocasesense, nohilight;
+if( ! result )  beep;
+
+// スペースや改行を揃える
+replaceallfast "}(?:\n *|)elseif \\(", "} elseif (", regular, nocasesense, nohilight;
+if( ! result )  beep;
+
+replaceallfast "}(?:\n *|)else(?:\n *|){", "} else {", regular, nocasesense, nohilight;
+if( ! result )  beep;
+
+// 配列の添字をシングルクォーテーションに揃える
+replaceallfast "\\[\"([a-zA-Z0-9_]+)\"\\]", "['\\1']", regular, nocasesense, nohilight;
+if( ! result )  beep;
+
+// 空文字をシングルクォーテーションに揃える
+replaceallfast "\"\";", "'';", regular, nocasesense, nohilight;
+if( ! result )  beep;
+
+endgroupundo 1;
+
+moveto #x, #y;
