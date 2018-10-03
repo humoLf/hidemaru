@@ -1,0 +1,10 @@
+/**
+ * 秀丸マクロ
+ * 文末のタブやスペースを削除する
+ * 
+ * Yusuke Komori
+ * http://humo-life.net/
+ * mail@humo-life.net
+ */
+
+setclipboard filename2;

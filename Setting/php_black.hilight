@@ -16,7 +16,7 @@
 113,GATEWAY_INTERFACE|SERVER_NAME
 113,JPEG|JPEG2WBMP
 113,\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*
-113,__(FILE__|LINE__|sleep|wakeup)
+113,__(FILE__|DIR__|LINE__|sleep|wakeup)
 113,array_(multisort|pad|pop|push|rand|reduce|reverse|search|shift|slice|splice|sum|udiff(_assoc|_uassoc)?|unique|unshift|values|walk)
 113,array_(change_key_case|chunk|combine|count_values|diff(_assoc|_uassoc)?|fil(l|ter)|flip|intersect(_assoc)?|key(_exists|s)|map|merge(_recursive)?)
 113,apache_(child_terminate|get(_(modules|version)|env)|lookup_uri|note|(request|response)_headers|setenv)
@@ -38,7 +38,7 @@
 113,cpdf_((continue|end)_text|curveto|fill(_stroke)?|finalize(_page)?|global_set_document_limits)
 113,count|count_chars
 113,copy|cos|cosh|count(_chars)?
-113,constant|convert_cyr_string
+113,constant|convert_cyr_string|const
 113,connection_(aborted|status|timeout)
 113,com_(addref|get|invoke|isenum|load|load_typelib|prop(get|put|set)|release|set)
 113,chdir|check(date|dnsrr)|chop|chown|chroot|chunk_split|chmod|chgrp|chr|class_exists|clearstatcache|close(dir|log)|com|compact
@@ -358,6 +358,7 @@
 427,;
 233,false
 233,true
+283,!(?=[^=])
 59,(class|class|function)
 185,([0-9]+)
 /<ColorSet>
@@ -409,7 +410,7 @@
 /[15][0]:0x000000EE
 /[15][1]:0x01000008
 /[15][2]:0x00000000
-/[16][0]:0x00666666
+/[16][0]:0x00999999
 /[16][1]:0x01000008
 /[16][2]:0x00000000
 /[17][0]:0x0100000E
@@ -418,7 +419,7 @@
 /[18][0]:0x00D1D1D1
 /[18][1]:0x01000008
 /[18][2]:0x00000000
-/[19][0]:0x00666666
+/[19][0]:0x00E0E0E0
 /[19][1]:0x01000008
 /[19][2]:0x00000000
 /[20][0]:0x004080FF
@@ -451,8 +452,8 @@
 /[29][0]:0x00808000
 /[29][1]:0x01000008
 /[29][2]:0x00000000
-/[30][0]:0x01000008
-/[30][1]:0x01000005
+/[30][0]:0x00E0E0E0
+/[30][1]:0x01000008
 /[30][2]:0x00000000
 /[31][0]:0x00E0E0E0
 /[31][1]:0x01000008
@@ -469,7 +470,7 @@
 /[35][0]:0x000000FF
 /[35][1]:0x01000008
 /[35][2]:0x00000000
-/[36][0]:0x000000FF
+/[36][0]:0x006666FF
 /[36][1]:0x01000008
 /[36][2]:0x00000001
 /[37][0]:0x0040FF00
@@ -547,6 +548,12 @@
 /[61][0]:0x01000008
 /[61][1]:0x01000005
 /[61][2]:0x00000000
+/[62][0]:0x000000FF
+/[62][1]:0x01000008
+/[62][2]:0x00000000
+/[63][0]:0x01000008
+/[63][1]:0x01000005
+/[63][2]:0x00000001
 /<ColorSetEx>
 /CurLineColorEx:0x002A2A2A
 /RulerColorEx:0xFFFFFFFF
